@@ -1,0 +1,145 @@
+:root {
+    --main-color:  #636060;
+    --green-color: #499A18;
+    --orange-color: #E06733;
+    --black-color: #000000;
+    --bg-color: #EDF2EC;
+  }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  
+  background-color: var(--bg-color);
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 35px;
+
+  color: var(--main-color);
+  }
+
+  .container {
+    /* max-width: 1440px; */
+    margin: 0 auto;
+  }
+
+
+/* Header styles start */
+
+.header__container {
+    max-width: 1220px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 16px;
+    line-height: 21px;
+    
+    color: var(--black-color); 
+  }
+
+  .nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 46px;
+    /* align-items: center; */
+  
+    list-style: none;
+  }
+
+  .link {
+    color: var(--black-color);
+    text-decoration: none;
+  
+    transition: color 0.3s;
+  }
+
+  .nav__link {
+    font-size: 16px;
+    line-height: 50px;
+    /* identical to box height, or 312% */
+   
+    color: #010201; 
+  }
+  
+  .link:hover {
+    color: rgb(207, 207, 125);
+    cursor: pointer;
+  }
+
+  .link:active,
+  .active {
+    font-weight: 700; 
+    color: var(--orange-color);  
+  }
+
+/* Header styles end */
+
+
+
+/* Main styles start */
+
+
+/* Main styles end */
+
+
+
+/* Footer styles start */
+
+.footer {
+    /* padding: 40px 109px; */
+    /* clear: both; */
+    background: #FFFFFF;
+  }
+  
+  .footer__container {
+    max-width: 1222px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 20px;
+    line-height: 50px;
+
+    color: var(--black-color);
+  }
+
+  .footer-data,
+  .social-list {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+/* Footer styles end */
+
+
+
+/* Media styles start */
+
+@media (max-width: 768px) {
+
+   
+  
+  }
+
+  @media (max-width: 380px) {
+
+   
+  
+}
+
+/* Media styles end */
