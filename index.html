@@ -16,7 +16,7 @@
     <title>Plants</title>
 </head>
 
-<body class="wrapper">
+<body class="body-wrapper">
 
     <!-- Header -->
 
@@ -24,14 +24,15 @@
         <div class="container header__container">
 
             <div class="logo">
-                <img src="./assets/svg/logo_vector.svg">Plants
+                <img class="logo__img" src="./assets/svg/logo_vector.svg" alt="logo">
+                <h1 class="logo__text">Plants</h1>
             </div>
 
             <nav class="nav menu">
                 <!-- menu -->
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="link nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about-us" class="link nav__link">About us</a></li>
+                    <li class="nav__item"><a href="#welcome" class="link nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="link nav__link">About us</a></li>
                     <li class="nav__item"><a href="#service" class="link nav__link">Service</a></li>
                     <li class="nav__item"><a href="#price" class="link nav__link">Price</a></li>
                     <li class="nav__item"><a href="#contacts" class="link nav__link">Contacts</a></li>
@@ -45,6 +46,229 @@
 
     <main class="main">
         <div class="container main__container">
+
+            <!-- welcome -->
+
+            <section class="section welcome__section" id="welcome">
+                <div class="container section__container welcome__container">
+
+                    <picture>
+                        <source srcset="./assets/img/leafs.png" type="image/jpeg" media="(min-width:1440px)">
+                        <source srcset="./assets/img/leafs_768.png" type="image/jpeg" media="(max-width:768px)">
+                        <!-- <source srcset="./assets/img/ocean-800x400.jpeg" type="image/jpeg"
+                            media="(min-width:992px)">
+                        <source srcset="./assets/img/ocean-400x600.jpeg" type="image/jpeg"
+                            media="(max-width:992px)"> -->
+                        <img class="welcome__img" src="./assets/img/leafs.png" alt="leafs">
+                    </picture>
+
+                    <div class="welcome__content">
+                        <h2 class="welcome__title">We grow <span class="green-color">plants</span> and give you oxygen
+                        </h2>
+                        <p class="welcome__text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem
+                            Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <button class="btn welcome__btn">LEARN MORE</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- about -->
+
+            <section class="section about__section" id="about">
+                <div class="container section__container about__container">
+                    <div class="about__content">
+                        <h2 class="about__title">We are <span class="orange-color">professional experienced</span>
+                            gardeners</h2>
+                        <p class="about__text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem
+                            Ipsum has been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries,
+                            but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    </div>
+
+                    <picture>
+                        <source srcset="./assets/img/houseplant.png" type="image/jpeg" media="(min-width:1440px)">
+                        <source srcset="./assets/img/houseplant_768.png" type="image/jpeg" media="(max-width:768px)">
+                        <source srcset="./assets/img/houseplant_380.png" type="image/jpeg" media="(max-width:380px)">
+
+                        <img class="about__img" src="./assets/img/houseplant.png" alt="plant">
+                    </picture>
+
+                </div>
+            </section>
+
+            <!-- service -->
+
+            <section class="section service__section" id="service">
+                <div class="container section__container service__container">
+
+                    <div class="service__content">
+                        <h2 class="service__title">Service and our projects</h2>
+                        <div class="service__btns">
+                            <button class="btn service__btn gardens__btn">Gardens</button>
+                            <button class="btn  service__btn lawn__btn">Lawn</button>
+                            <button class="btn service__btn planting__btn">Planting</button>
+                        </div>
+                    </div>
+
+                    <div class="service__items">
+
+                        <div class="item">
+                            <picture>
+                                <source srcset="./assets/img/garden-care-1.jpg" type="image/jpeg"
+                                    media="(min-width:1440px)">
+                                <source srcset="./assets/img/garden-care-1_768.jpg" type="image/jpeg"
+                                    media="(max-width:768px)">
+                                <img class="item__image" src="./assets/img/garden-care-1.jpg" alt="garden care">
+                            </picture>
+                            <h3 class="item__title">Garden care</h3>
+                            <p class="item__text">Lorem Ipsum has been the industry</p>
+                        </div>
+
+                        <div class="item">
+                            <picture>
+                                <source srcset="./assets/img/planting-1.jpg" type="image/jpeg"
+                                    media="(min-width:1440px)">
+                                <source srcset="./assets/img/planting-1_768.jpg" type="image/jpeg"
+                                    media="(max-width:768px)">
+                                <img class="item__image" src="./assets/img/planting-1.png" alt="planting">
+                            </picture>
+                            <h3 class="item__title">Planting</h3>
+                            <p class="item__text">Lorem Ipsum has been the industry</p>
+                        </div>
+
+                        <div class="item">
+                            <picture>
+                                <source srcset="./assets/img/lawn-care.jpg" type="image/jpeg"
+                                    media="(min-width:1440px)">
+                                <source srcset="./assets/img/lawn-care_768.jpg" type="image/jpeg"
+                                    media="(max-width:768px)">
+                                <img class="item__image" src="./assets/img/lawn-care.jpg" alt="lawn care">
+                            </picture>
+                            <h3 class="item__title">Lawn care</h3>
+                            <p class="item__text">Lorem Ipsum has been the industry</p>
+                        </div>
+
+                        <div class="item">
+                            <picture>
+                                <source srcset="./assets/img/planting-2.jpg" type="image/jpeg"
+                                    media="(min-width:1440px)">
+                                <source srcset="./assets/img/planting-2_768.jpg" type="image/jpeg"
+                                    media="(max-width:768px)">
+                                <img class="item__image" src="./assets/img/planting-2.png" alt="planting">
+                            </picture>
+                            <h3 class="item__title">Planting</h3>
+                            <p class="item__text">Lorem Ipsum has been the industry</p>
+                        </div>
+
+                        <div class="item">
+                            <picture>
+                                <source srcset="./assets/img/garden-care-2.jpg" type="image/jpeg"
+                                    media="(min-width:1440px)">
+                                <source srcset="./assets/img/garden-care-2_768.jpg" type="image/jpeg"
+                                    media="(max-width:768px)">
+                                <img class="item__image" src="./assets/img/garden-care-2.jpg" alt="garden care">
+                            </picture>
+                            <h3 class="item__title">Garden care</h3>
+                            <p class="item__text">Lorem Ipsum has been the industry</p>
+                        </div>
+
+                        <div class="item">
+                            <picture>
+                                <source srcset="./assets/img/planting-3.jpg" type="image/jpeg"
+                                    media="(min-width:1440px)">
+                                <source srcset="./assets/img/planting-3_768.jpg" type="image/jpeg"
+                                    media="(max-width:768px)">
+                                <img class="item__image" src="./assets/img/planting-3.jpg" alt="planting">
+                            </picture>
+                            <h3 class="item__title">Planting</h3>
+                            <p class="item__text">Lorem Ipsum has been the industry</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- price -->
+
+            <section class="section price__section" id="price">
+                <div class="container section__container price__container">
+                    <div class="price__content">
+                        <h2 class="price__title">Prices</h2>
+                        <div class="price__items">
+                            <div class="price__item">
+                                <h4>Basics</h4>
+                                <img src="./assets/svg/accordion_btn.svg" alt="accordion button">
+                            </div>
+
+                            <div class="price__item">
+                                <h4>Standard</h4>
+                                <img src="./assets/svg/accordion_btn.svg" alt="accordion button">
+                            </div>
+
+                            <div class="price__item">
+                                <h4>Pro care</h4>
+                                <img src="./assets/svg/accordion_btn.svg" alt="accordion button">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="price__help">
+                        <h2 class="help__title">Our best <span class="color-green">gardeners</span> are ready to help
+                            you</h2>
+                        <button class="btn help_btn">Contact us</button>
+                        <picture>
+                            <source srcset="./assets/img/leafs-2.png" type="image/jpeg" media="(min-width:1440px)">
+                            <source srcset="./assets/img/leafs-2_768.png" type="image/jpeg" media="(max-width:768px)">
+                            <img class="help__img" src="./assets/img/leafs-2.png" alt="leafs">
+                        </picture>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- contacts -->
+
+            <section class="section contacts__section" id="contacts">
+                <div class="container section__container contacts__container">
+                    <div class="contacts__content">
+
+                        <div>
+                            <picture>
+                                <source srcset="./assets/img/contact_woman.png" type="image/jpeg"
+                                    media="(min-width:1440px)">
+                                <source srcset="./assets/img/contact_woman_768.png" type="image/jpeg"
+                                    media="(max-width:768px)">
+                                <source srcset="./assets/img/contact_woman_380.png" type="image/jpeg"
+                                    media="(max-width:380px)">
+                                <img class="contacts__img" src="./assets/img/contact_woman.png" alt="contact woman">
+                            </picture>
+                        </div>
+
+                        <h2 class="contacts__title">Contacts us</h2>
+
+                        <div class="contacts__options">
+                            <!-- <label for="city">City</label> -->
+
+                            <select class="city" id="city">
+                                <option label="" selected hidden>City</option>
+
+                                <option value="Canandaigua, NY">Canandaigua, NY</option>
+                                <option value="New York City">New York City</option>
+                                <option value="Yonkers, NY">Yonkers, NY</option>
+                                <option value="Sherrill, NY">Sherrill, NY</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
 
         </div>
     </main>
@@ -70,16 +294,17 @@
             <div class="social-list">
 
                 <a class="link inst__link" href="https://www.instagram.com" target="_blank">
-                    <img class="inst__img" src="./assets/svg/inst.svg" alt="instagram"> </a>
+                    <img class="inst__img" src="./assets/svg/inst.svg" alt="instagram" width="32" height="32"> </a>
 
                 <a class="link fb__link" href="https://www.facebook.com" target="_blank">
-                    <img class="fb__img" src="./assets/svg/fb.svg" alt="facebook"> </a>
+                    <img class="fb__img" src="./assets/svg/fb.svg" alt="facebook" width="32" height="32"> </a>
 
                 <a class="link tw__link" href="https://twitter.com" target="_blank">
-                    <img class="tw__img" src="./assets/svg/tw.svg" alt="twitter"> </a>
+                    <img class="tw__img" src="./assets/svg/tw.svg" alt="twitter" width="32" height="32"> </a>
 
                 <a class="link pinterest__link" href="https://www.pinterest.com" target="_blank">
-                    <img class="pinterest__img" src="./assets/svg/pinterest.svg" alt="pinterest"> </a>
+                    <img class="pinterest__img" src="./assets/svg/pinterest.svg" alt="pinterest" width="32" height="32">
+                </a>
 
             </div>
 
