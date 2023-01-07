@@ -14,6 +14,8 @@
     <link rel="shortcut icon" href="./assets/favicon.svg" sizes="16x16">
 
     <title>Plants</title>
+
+    <script defer src="index.js"></script>
 </head>
 
 <body class="body-wrapper">
@@ -23,21 +25,33 @@
     <header class="header">
         <div class="container header__container">
 
-            <div class="logo">
+            <div class="header__logo">
                 <img class="logo__img" src="./assets/svg/logo_vector.svg" alt="logo">
                 <h1 class="logo__text">Plants</h1>
             </div>
 
-            <nav class="nav menu">
-                <!-- menu -->
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#welcome" class="link nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="link nav__link">About us</a></li>
-                    <li class="nav__item"><a href="#service" class="link nav__link">Service</a></li>
-                    <li class="nav__item"><a href="#price" class="link nav__link">Price</a></li>
-                    <li class="nav__item"><a href="#contacts" class="link nav__link">Contacts</a></li>
-                </ul>
-            </nav>
+            <!-- menu  -->
+
+            <div class="header__menu menu">
+                <div class="menu__icon">
+                    <span class="burger__line burger__line_second"></span>
+                    <span class="burger__line burger__line_third"></span>
+                </div>
+
+                <!-- <span class="burger__line burger__line_first"></span> -->
+                <!-- <span class="burger__line burger__line_second"></span> -->
+                <!-- <span class="burger__line burger__line_third"></span> -->
+
+                <nav class="menu__body">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="#welcome" class="menu__link link active">Home</a></li>
+                        <li class="menu__item"><a href="#about" class="menu__link link">About us</a></li>
+                        <li class="menu__item"><a href="#service" class="menu__link link">Service</a></li>
+                        <li class="menu__item"><a href="#price" class="menu__link link">Price</a></li>
+                        <li class="menu__item"><a href="#contacts" class="menu__link link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
 
         </div>
     </header>
@@ -52,15 +66,17 @@
             <section class="section welcome__section" id="welcome">
                 <div class="container section__container welcome__container">
 
-                    <picture>
-                        <source srcset="./assets/img/leafs.png" type="image/jpeg" media="(min-width:1440px)">
-                        <source srcset="./assets/img/leafs_768.png" type="image/jpeg" media="(max-width:768px)">
-                        <!-- <source srcset="./assets/img/ocean-800x400.jpeg" type="image/jpeg"
+                    <div class="welcome__img">
+                        <picture>
+                            <source srcset="./assets/img/leafs.png" type="image/jpeg" media="(min-width:1440px)">
+                            <source srcset="./assets/img/leafs_768.png" type="image/jpeg" media="(max-width:1068px)">
+                            <!-- <source srcset="./assets/img/ocean-800x400.jpeg" type="image/jpeg"
                             media="(min-width:992px)">
                         <source srcset="./assets/img/ocean-400x600.jpeg" type="image/jpeg"
                             media="(max-width:992px)"> -->
-                        <img class="welcome__img" src="./assets/img/leafs.png" alt="leafs">
-                    </picture>
+                            <img class="welcome__img" src="./assets/img/leafs.png" alt="leafs">
+                        </picture>
+                    </div>
 
                     <div class="welcome__content">
                         <h2 class="welcome__title">We grow <span class="green-color">plants</span> and give you oxygen
@@ -91,9 +107,9 @@
                     </div>
 
                     <picture>
-                        <source srcset="./assets/img/houseplant.png" type="image/jpeg" media="(min-width:1440px)">
-                        <source srcset="./assets/img/houseplant_768.png" type="image/jpeg" media="(max-width:768px)">
-                        <source srcset="./assets/img/houseplant_380.png" type="image/jpeg" media="(max-width:380px)">
+                        <source srcset="./assets/img/houseplant.png" media="(min-width:1440px)">
+                        <source srcset="./assets/img/houseplant_768.png" media="(max-width:1068px)">
+                        <source srcset="./assets/img/houseplant_380.png" media="(max-width:767px)">
 
                         <img class="about__img" src="./assets/img/houseplant.png" alt="plant">
                     </picture>
@@ -122,7 +138,7 @@
                                 <source srcset="./assets/img/garden-care-1.jpg" type="image/jpeg"
                                     media="(min-width:1440px)">
                                 <source srcset="./assets/img/garden-care-1_768.jpg" type="image/jpeg"
-                                    media="(max-width:768px)">
+                                    media="(max-width:1068px)">
                                 <img class="item__image" src="./assets/img/garden-care-1.jpg" alt="garden care">
                             </picture>
                             <h3 class="item__title">Garden care</h3>
@@ -134,7 +150,7 @@
                                 <source srcset="./assets/img/planting-1.jpg" type="image/jpeg"
                                     media="(min-width:1440px)">
                                 <source srcset="./assets/img/planting-1_768.jpg" type="image/jpeg"
-                                    media="(max-width:768px)">
+                                    media="(max-width:1068px)">
                                 <img class="item__image" src="./assets/img/planting-1.png" alt="planting">
                             </picture>
                             <h3 class="item__title">Planting</h3>
@@ -146,7 +162,7 @@
                                 <source srcset="./assets/img/lawn-care.jpg" type="image/jpeg"
                                     media="(min-width:1440px)">
                                 <source srcset="./assets/img/lawn-care_768.jpg" type="image/jpeg"
-                                    media="(max-width:768px)">
+                                    media="(max-width:1068px)">
                                 <img class="item__image" src="./assets/img/lawn-care.jpg" alt="lawn care">
                             </picture>
                             <h3 class="item__title">Lawn care</h3>
@@ -158,7 +174,7 @@
                                 <source srcset="./assets/img/planting-2.jpg" type="image/jpeg"
                                     media="(min-width:1440px)">
                                 <source srcset="./assets/img/planting-2_768.jpg" type="image/jpeg"
-                                    media="(max-width:768px)">
+                                    media="(max-width:1068px)">
                                 <img class="item__image" src="./assets/img/planting-2.png" alt="planting">
                             </picture>
                             <h3 class="item__title">Planting</h3>
@@ -170,7 +186,7 @@
                                 <source srcset="./assets/img/garden-care-2.jpg" type="image/jpeg"
                                     media="(min-width:1440px)">
                                 <source srcset="./assets/img/garden-care-2_768.jpg" type="image/jpeg"
-                                    media="(max-width:768px)">
+                                    media="(max-width:1068px)">
                                 <img class="item__image" src="./assets/img/garden-care-2.jpg" alt="garden care">
                             </picture>
                             <h3 class="item__title">Garden care</h3>
@@ -182,7 +198,7 @@
                                 <source srcset="./assets/img/planting-3.jpg" type="image/jpeg"
                                     media="(min-width:1440px)">
                                 <source srcset="./assets/img/planting-3_768.jpg" type="image/jpeg"
-                                    media="(max-width:768px)">
+                                    media="(max-width:1068px)">
                                 <img class="item__image" src="./assets/img/planting-3.jpg" alt="planting">
                             </picture>
                             <h3 class="item__title">Planting</h3>
@@ -201,20 +217,51 @@
                     <div class="price__content">
                         <h2 class="price__title">Prices</h2>
                         <div class="price__items">
+
                             <div class="price__item">
                                 <h4>Basics</h4>
-                                <img src="./assets/svg/accordion_btn.svg" alt="accordion button">
+                                <div class="accordion-btn">
+                                    <span class="accordion-btn__arrow"></span>
+                                </div>
+                                <!-- <img src="./assets/svg/accordion_btn.svg" alt="accordion button"> -->
                             </div>
 
                             <div class="price__item">
                                 <h4>Standard</h4>
-                                <img src="./assets/svg/accordion_btn.svg" alt="accordion button">
+                                <div class="accordion-btn">
+                                    <span class="accordion-btn__arrow"></span>
+                                </div>
+                                <!-- <img src="./assets/svg/accordion_btn.svg" alt="accordion button"> -->
                             </div>
 
                             <div class="price__item">
                                 <h4>Pro care</h4>
-                                <img src="./assets/svg/accordion_btn.svg" alt="accordion button">
+                                <div class="accordion-btn">
+                                    <span class="accordion-btn__arrow"></span>
+                                </div>
+                                <!-- <img src="./assets/svg/accordion_btn.svg" alt="accordion button"> -->
                             </div>
+
+                            <div class="pop-up">
+                                <div class="container pop-up__container">
+                                    <div class="pop-up__price__item">
+                                        <h4 class="pop-up__title"> Basics</h4>
+
+                                        <div class="pop-up__accordion-btn accordion-btn">
+                                            <span class="accordion-btn__arrow"></span>
+                                        </div>
+
+                                        <!-- <img class="pop-up__img" src="./assets/svg/accordion_btn.svg"
+                                            alt="accordion button"> -->
+                                    </div>
+                                    <hr class="pop-up__line">
+                                    <p class="pop-up__text">Release of Letraset sheets containing Lorem Ipsum passages,
+                                        and more recently</p>
+                                    <div class="pop-up__price"> <span class="orange-color">$15</span> / per hour</div>
+                                    <button class="pop-up__button">Order</button>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -224,7 +271,7 @@
                         <button class="btn help_btn">Contact us</button>
                         <picture>
                             <source srcset="./assets/img/leafs-2.png" type="image/jpeg" media="(min-width:1440px)">
-                            <source srcset="./assets/img/leafs-2_768.png" type="image/jpeg" media="(max-width:768px)">
+                            <source srcset="./assets/img/leafs-2_768.png" type="image/jpeg" media="(max-width:1068px)">
                             <img class="help__img" src="./assets/img/leafs-2.png" alt="leafs">
                         </picture>
                     </div>
@@ -238,14 +285,14 @@
                 <div class="container section__container contacts__container">
                     <div class="contacts__content">
 
-                        <div>
+                        <div class="contacts__img">
                             <picture>
-                                <source srcset="./assets/img/contact_woman.png" type="image/jpeg"
+                                <source srcset="./assets/img/contact_woman.png"
                                     media="(min-width:1440px)">
-                                <source srcset="./assets/img/contact_woman_768.png" type="image/jpeg"
-                                    media="(max-width:768px)">
-                                <source srcset="./assets/img/contact_woman_380.png" type="image/jpeg"
-                                    media="(max-width:380px)">
+                                <source srcset="./assets/img/contact_woman_768.png"
+                                    media="(max-width:1068px)">
+                                <source srcset="./assets/img/contact_woman_380.png"
+                                    media="(max-width:767px)">
                                 <img class="contacts__img" src="./assets/img/contact_woman.png" alt="contact woman">
                             </picture>
                         </div>
@@ -256,7 +303,7 @@
                             <!-- <label for="city">City</label> -->
 
                             <select class="city" id="city">
-                                <option label="" selected hidden>City</option>
+                                <option label="City" selected hidden>City</option>
 
                                 <option value="Canandaigua, NY">Canandaigua, NY</option>
                                 <option value="New York City">New York City</option>
