@@ -1,4 +1,4 @@
 # Plants
 
-https://IuliiaPi.github.io/Plants
+https://IuliiaPi.github.io/Plants/
 
