@@ -122,6 +122,13 @@ body._lock {
   margin: 0 auto;
 }
 
+/* .hidden {
+  visibility: hidden;
+}
+
+.visible {
+  display: block;
+} */
 
 /*  ----------------- Header styles start ---------------------- */
 
@@ -268,7 +275,7 @@ body._lock {
   background-color: transparent;
 
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .btn:hover,
@@ -278,7 +285,7 @@ body._lock {
 }
 
 .btn:active {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .welcome__btn {
@@ -388,6 +395,13 @@ body._lock {
   line-height: 26px;
 
   color: var(--orange-color);
+
+  /* transition: all 0.5s ease; */
+}
+
+.btn_active {
+  color: var(--bg-white-color);
+  background-color: var(--orange-color);
 }
 
 .service__items {
@@ -404,15 +418,34 @@ body._lock {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+
+  transition: all 0.8s ease;
 }
 
-.service__item:invalid {
+.service__item_valid {
+  filter: blur(0px);
+  /* background-color: var(--orange-color); */
+}
+
+.service__item_invalid {
   filter: blur(2px);
 }
 
 .item__image {
   border-radius: 20px 20px 0px 0px;
+}
+
+.item__text {
+  width: 330px;
+  padding-top: 11px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  border: 1px solid #E3E1D5;
+  border-radius: 0px 0px 20px 20px;
 }
 
 .item__title {
@@ -425,7 +458,7 @@ body._lock {
   color: var(--orange-color);
 }
 
-.item__text {
+.item__subtitle {
   margin-bottom: 36px;
 
   font-family: 'Inter';
@@ -537,6 +570,9 @@ body._lock {
 
 /* ----------------  pop-up ---------------- */
 
+/* .pop-up_basics, */
+/* .pop-up_standard, */
+/* .pop-up_pro-care  */
 .price__pop-up {
   width: 250px;
   height: 154px;
@@ -552,17 +588,18 @@ body._lock {
   border-radius: 20px;
 }
 
-.visible {
+/* .visible {
   display: block;
 }
 
 .hidden {
   visibility: hidden;
-}
+} */
 
 /* .price__item:hover .accordion-btn, */
 .accordion-btn:hover,
-.pop-up__accordion-btn {
+.pop-up__accordion-btn,
+.accordion-btn_active {
   background: #AEA1A1;
 
   cursor: pointer;
@@ -589,6 +626,8 @@ body._lock {
   transition: transform 0.3s ease;
 }
 
+
+
 .pop-up__accordion-btn:hover .accordion-btn__arrow {
   border: solid #717171;
   border-width: 0 0.5px 0.5px 0;
@@ -605,6 +644,8 @@ body._lock {
   -webkit-transform: rotate(45deg);
   transition: transform 0.3s ease;
 }
+
+
 
 /* .price__item:hover .price__pop-up {
   display: block;
@@ -684,6 +725,7 @@ body._lock {
 
   color: #717171;
 
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
@@ -760,9 +802,9 @@ body._lock {
 }
 
 .contacts__options {
-  width: 450px;
+  /* width: 450px; */
 
-  padding-top: 94px;
+  /* padding-top: 94px; */
 
   /* background: #D6E7D2;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -779,11 +821,25 @@ letter-spacing: 0.05em;
 color: #717171; */
 }
 
-.city {
-  width: 100%;
-  /* max-width: 450px; */
+.contacts__block {
+  padding-top: 95px;
 
-  padding: 12px 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 20px; */
+}
+
+.contacts__select {
+  /* width: 100%; */
+  width: 450px;
+
+  padding: 6px 33px 5px 21px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  order: 1;
 
   background: #D6E7D2;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -794,7 +850,7 @@ color: #717171; */
   font-weight: 400;
   font-size: 20px;
   line-height: 40px;
-  
+
   letter-spacing: 0.05em;
 
   color: #717171;
@@ -803,42 +859,165 @@ color: #717171; */
   transition: all 0.3s ease;
 }
 
-.city:hover {
+.contacts__select:hover {
   background: #C1E698;
 }
 
-option {
-  max-width: 450px;
-
-  background-color: var(--orange-color);
-  color: var(--green-color);
+.contacts__select_active {
+  background: #C1E698;
 }
 
-option:before {
-  /* content: ">";
-  font-size: 20px;
+.contacts__options {
+  width: 450px;
+  /* max-height: 234px; */
+
   display: none;
-  padding-right: 10px;
-  padding-left: 5px;
-  color: #fff; */
+
+  order: 2;
+
+  background: #DCE9D9;
 }
 
-option:hover:before {
-  /* display: inline; */
+.contacts__options-content {
+  padding: 27px 50px 31px 26px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* align-items:flex-start; */
 }
 
-option[value] {
+.contacts__option {
+  width: 100%;
+  padding-left: 10px;
+  border-bottom: 1px solid #D9D9D9;
+
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 40px;
-  /* or 250% */
+
   letter-spacing: 0.05em;
 
-  color: var(--green-color);
+  text-align: left;
 
+  color: #499A18;
+  background: #DCE9D9;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.contacts__option:hover {
+  border-bottom: 1px solid #717171;
+
+  color: #717171;
+}
+
+.accordion-btn_contacts {
+  background: #AEA1A1;
+}
+
+.accordion-btn__arrow_contacts {
+  border: solid white;
+  border-width: 0 0.5px 0.5px 0;
+}
+
+.accordion-btn__arrow_active {
+  border: solid white;
+  border-width: 0 0.5px 0.5px 0;
+
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transition: transform 0.3s ease;
+}
+
+.contacts__pop-up {
+  width: 448px;
+  margin-top: 40px;
+
+  display: none;
+  order: 2;
+
+  background: #EDF2EC;
+  border: 1px solid #000000;
+  border-radius: 20px;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.contacts__pop-up-content {
+  padding: 17px 76px 32px 33px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.contacts__contact {
+  display: flex;
+  gap: 25px;
+}
+
+.contact__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__list_title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+
+  letter-spacing: 0.05em;
+
+  color: #000000;
+}
+
+.contact__list_subtitle,
+.contact__list_subtitle .link_call-us {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  
+  letter-spacing: 0.05em;
+
+  color: #717171;
+}
+
+.btn_call-us {
+  width: 122px;
+  height: 26px;
+  /* padding: 7px 29px; */
+  /* text-align: center; */
+
+  border: 1px solid #E06733;
+  border-radius: 5px;
+}
+
+.link_call-us {
+  font-family: 'Inika';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 13px;
+  text-align: center;
+
+  color: #717171;
+}
+
 
 /* ----------------------  Main styles end  ------------------------- */
 
@@ -981,16 +1160,24 @@ option[value] {
   }
 
   .service__items {
-    gap: 22px 108px;
-    margin-bottom: 51px;
+    gap: 37px 108px;
+    margin-bottom: 66px;
   }
 
   .service__item {
-    gap: 10px;
+    /* gap: 10px; */
   }
 
   .item__text {
+    width: 280px;
+    padding-top: 10px;
+
+    gap: 10px;
+  }
+
+  .item__subtitle {
     max-width: 250px;
+    margin-bottom: 19px;
 
     text-align: center;
   }
@@ -1006,6 +1193,18 @@ option[value] {
     font-size: 35px;
     line-height: 42px;
   }
+
+
+  /* ----------------  pop-up ---------------- */
+
+  .pop-up__container {
+    max-width: 169px;
+
+    padding: 16px 0 12px;
+  }
+
+  /* -------------------------------- */
+
 
   .price__help {
     padding-top: 100px;
@@ -1038,10 +1237,16 @@ option[value] {
     order: 1;
   }
 
-  .contacts__options {
+  .contacts__block {
     padding-top: 0px;
     margin-bottom: 250px;
     order: 2;
+  }
+
+  .contacts__options {
+    /* padding-top: 0px; */
+    /* margin-bottom: 250px; */
+    /* order: 2; */
   }
 
   .contacts__img {
@@ -1286,8 +1491,12 @@ option[value] {
 
   .service__items {
     justify-content: center;
-    gap: 18px 0px;
-    margin-bottom: 8px;
+    gap: 34px 0px;
+    margin-bottom: 23px;
+  }
+
+  .item__text {
+    padding-top: 9px;
   }
 
   /* price */
@@ -1328,6 +1537,26 @@ option[value] {
 
     font-size: 16px;
   }
+
+
+  /* ----------------  pop-up ---------------- */
+
+  .price__pop-up {
+    width: 200px;
+    /* height: 154px; */
+
+    top: 18%;
+    left: 5%;
+  }
+
+  .pop-up__container {
+    max-width: 169px;
+
+    /* padding: 16px 0 12px; */
+  }
+
+  /* -------------------------------- */
+
 
   .price__help {
     padding-top: 0px;
@@ -1371,9 +1600,29 @@ option[value] {
     margin-bottom: 80px;
   }
 
-  .contacts__options {
-    max-width: 300px;
+  .contacts__block {
     margin-bottom: 132px;
+  }
+
+  .contacts__select {
+    width: 300px;
+  }
+
+  .contacts__options {
+    width: 302px;
+  }
+
+  .contacts__pop-up {
+    width: 318px;
+  }
+
+  .contacts__pop-up-content {
+    padding: 15px 4px;
+    gap: 15px;
+  }
+
+  .contacts__contact {
+    gap: 1px;
   }
 
   /* ------------------------ Main styles end -------------------  */
